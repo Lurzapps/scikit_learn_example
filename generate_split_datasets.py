@@ -16,4 +16,4 @@ test_list, train_list = [], []
 # read the og file
 og = pd.read_csv(og_addr)
 
-#
+# get columns
