@@ -1,11 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+import plotting
 
 # defines which scaling method will be used
 # and which classifier
 # (this has to be down in the code as well!)
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression, LinearRegression
 
 # define the column names and file addresses
 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
@@ -30,20 +33,7 @@ training = pd.read_csv(training_set_address, names=names)
 testing = pd.read_csv(testing_set_address, names=names)
 
 # plotting for data preview
-# get columns to plot
-columns = training.columns.drop(['class'])
-# create x data
-x_data = range(0, training.shape[0])
-# create figure and axis
-fig, ax = plt.subplots()
-# plot each column
-for column in columns:
-    ax.plot(x_data, training[column], label=column)
-
-ax.legend()
-
-# show the graph in sci view
-plt.show()
+plotting.plot(training, names[columnClass])
 
 # slice the arrays: the data are in columns 0-4 (excl.)
 # and the names (classes) in column 4
@@ -70,23 +60,23 @@ scaling = MinMaxScaler()
 # scale on axis the data, set the target
 trainingX, trainingY = scaling.fit_transform(training_data), training_target
 
-# linear regression model
-lin_reg = LinearRegression()
+# the model model
+model = LinearRegression()
 # fit linear model
-lin_reg.fit(trainingX, trainingY)
+model.fit(trainingX, trainingY)
 
 # fit the testing data
 testingX = scaling.transform(testing_data)
 # the testing y is the testing_target
 # print the score of the testing data
-print('score: %f' % lin_reg.score(testingX, testing_target))
+print('score: %f' % model.score(testingX, testing_target))
 
 
 # function for predicting (not used yet)
 def predict(data):
     global scaling
-    global lin_reg
-    pre_predictions = lin_reg.predict(scaling.transform(data))
+    global model
+    pre_predictions = model.predict(scaling.transform(data))
     predictions = []
 
     for prediction in pre_predictions:
