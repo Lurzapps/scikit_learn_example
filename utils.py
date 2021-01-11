@@ -1,16 +1,17 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pickle
+import global_variables as gl_vars
 
 
-def plot(data, class_column_name):
+def plot(data):
     # get columns to plot
     columns = data.columns
 
     # plot pairs
     pair_plot = sns.pairplot(data[columns], height=1.8, aspect=1.8,
                              plot_kws=dict(edgecolor="k", linewidth=0.5),
-                             diag_kind='kde', hue=class_column_name)
+                             diag_kind='kde', hue=gl_vars.column_names[gl_vars.class_column_index])
 
     # little design
     pp_fig = pair_plot.fig
