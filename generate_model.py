@@ -11,8 +11,8 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression, LinearRegression
 
 # read the train, testing and cross validation csv
-training = pd.read_csv(gl_vars.training_set_address, names=gl_vars.column_names)
-testing = pd.read_csv(gl_vars.testing_set_address, names=gl_vars.column_names)
+training = pd.read_csv(gl_vars.training_set_address, quotechar='"', skipinitialspace=True, names=gl_vars.column_names)
+testing = pd.read_csv(gl_vars.testing_set_address, quotechar='"', skipinitialspace=True, names=gl_vars.column_names)
 
 # slice the arrays: the data are in columns 0-4 (excl.)
 # and the names (classes) in column 4
@@ -40,7 +40,7 @@ scaling = MinMaxScaler()
 trainingX, trainingY = scaling.fit_transform(training_data), training_target
 
 # the model model
-model = LinearRegression()
+model = LogisticRegression()
 # fit linear model
 model.fit(trainingX, trainingY)
 
