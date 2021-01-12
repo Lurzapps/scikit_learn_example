@@ -9,14 +9,5 @@ training_set_address = 'training.csv'
 testing_set_address = 'testing.csv'
 
 classes = {
-    'acousticness': 1,
-    'danceability': 2,
-    'duration_ms': 3,
-    'energy': 4,
-    'instrumentalness': 5,
-    'liveness': 6,
-    'loudness': 7,
-    'speechiness': 8,
-    'tempo': 9,
-    'valence': 10,
+
 }
