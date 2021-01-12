@@ -4,10 +4,10 @@ import pandas as pd
 import utils
 import global_variables as gl_vars
 
-out = []
+# read
+data = pd.read_csv('dataset.csv', quotechar='"', skipinitialspace=True, names=gl_vars.column_names())
 
-data = pd.read_csv('spotify_clean.csv', quotechar='"', skipinitialspace=True)
-data.columns = gl_vars.column_names
+# clean here
 
-
-data.to_csv('spotify_clean.csv', mode='w', index=False)
+# save again
+data.to_csv('dataset.csv', mode='w', index=False)
