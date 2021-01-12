@@ -6,7 +6,12 @@ import global_variables as gl_vars
 
 def plot(data):
     # get columns to plot
-    columns = data.columns
+    columns = []
+    for i in range(len(data.columns)):
+        if i == gl_vars.class_column_index or gl_vars.column_features_start <= i < gl_vars.column_features_stop:
+            columns.append(data.columns[i])
+
+    print(data[columns])
 
     # plot pairs
     pair_plot = sns.pairplot(data[columns], height=1.8, aspect=1.8,
@@ -44,3 +49,11 @@ def predict(classes_from_keys, model, scaling, data):
         predictions.append(classes_from_keys[int(round(prediction))])
 
     return predictions
+
+
+def find_nth(haystack, needle, n):
+    start = haystack.find(needle)
+    while start >= 0 and n > 1:
+        start = haystack.find(needle, start+len(needle))
+        n -= 1
+    return start
