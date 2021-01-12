@@ -12,7 +12,7 @@ from sklearn.linear_model import LogisticRegression, LinearRegression
 from sklearn.model_selection import KFold
 
 # read the dataset
-df = pd.read_csv(gl_vars.dataset_address, quotechar='"', skipinitialspace=True, names=gl_vars.column_names())
+df = pd.read_csv(gl_vars.dataset_address(), quotechar='"', skipinitialspace=True, names=gl_vars.column_names())
 
 # create a kfold instance for cross validation
 kfold = KFold(n_splits=5, shuffle=True)
