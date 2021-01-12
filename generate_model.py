@@ -2,53 +2,52 @@ import pandas as pd
 
 import utils
 import global_variables as gl_vars
-
+import numpy as np
 
 # defines which scaling method will be used
 # and which classifier
 # (this has to be down in the code as well!)
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression, LinearRegression
+from sklearn.model_selection import KFold
 
-# read the train, testing and cross validation csv
-training = pd.read_csv(gl_vars.training_set_address, quotechar='"', skipinitialspace=True, names=gl_vars.column_names)
-testing = pd.read_csv(gl_vars.testing_set_address, quotechar='"', skipinitialspace=True, names=gl_vars.column_names)
+# read the dataset
+df = pd.read_csv(gl_vars.dataset_address, quotechar='"', skipinitialspace=True, names=gl_vars.column_names)
 
-# slice the arrays: the data are in columns 0-4 (excl.)
-# and the names (classes) in column 4
-training_data = training.iloc[:, gl_vars.column_features_start:gl_vars.column_features_stop].values
+# create a kfold instance for cross validation
+kfold = KFold(n_splits=5, shuffle=True)
 
-training_target_pre = training.iloc[:, gl_vars.class_column_index].values
-training_target = []
+# index for loop
+idx = 0
 
-# class names in numbers
-for name in training_target_pre:
-    training_target.append(gl_vars.classes[name])
+# create splits form the dataframe
+for train_df, test_df in kfold.split(df):
+    # gather target and training data from data
+    training_data = train_df.iloc[:, gl_vars.column_features_start:gl_vars.column_features_stop].values
+    training_target = train_df.iloc[:, gl_vars.class_column_index].values
 
-# do the same with the testing dataset
-testing_data = testing.iloc[:, gl_vars.column_features_start:gl_vars.column_features_stop].values
+    # same for for testing split set
+    testing_data = train_df.iloc[:, gl_vars.column_features_start:gl_vars.column_features_stop].values
+    testing_target = train_df.iloc[:, gl_vars.class_column_index].values
 
-testing_target_pre = testing.iloc[:, gl_vars.class_column_index].values
-testing_target = []
+    # init the scaler
+    scaling = MinMaxScaler()
+    # scale on axis the data, set the target
+    trainingX, trainingY = scaling.fit_transform(training_data), training_target
 
-for name in testing_target_pre:
-    testing_target.append(gl_vars.classes[name])
+    # the model model
+    model = LogisticRegression()
+    # fit linear model
+    model.fit(trainingX, trainingY)
 
-# init the scaler
-scaling = MinMaxScaler()
-# scale on axis the data, set the target
-trainingX, trainingY = scaling.fit_transform(training_data), training_target
+    # fit the testing data
+    testingX = scaling.transform(testing_data)
+    # the testing y is the testing_target
+    # print the score of the testing data
+    print('score %i: %f' % (idx, model.score(testingX, testing_target)))
 
-# the model model
-model = LogisticRegression()
-# fit linear model
-model.fit(trainingX, trainingY)
+    # save the model afterwards
+    utils.save_model_and_scaling(model, scaling, idx)
 
-# fit the testing data
-testingX = scaling.transform(testing_data)
-# the testing y is the testing_target
-# print the score of the testing data
-print('score: %f' % model.score(testingX, testing_target))
-
-# save the model afterwards
-utils.save_model_and_scaling(model, scaling)
+    # grow idx
+    idx += 1
