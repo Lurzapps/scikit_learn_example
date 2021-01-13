@@ -16,7 +16,7 @@ def dataset_address() -> str:
 def column_names() -> list:
     global dataset_name
     with open('datasets/%s.txt' % dataset_name, 'r') as f:
-        return f.read().split(',')
+        return f.read().split(';')
 
 
 def read_df() -> DataFrame:

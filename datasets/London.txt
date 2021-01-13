@@ -1,1 +1,1 @@
-idx,Property Name,Price,House Type,Area in sq ft,No. of Bedrooms,No. of Bathrooms,No. of Receptions,Location,City/County,Postal Code
+price;area;loc;bedrooms
