@@ -37,17 +37,21 @@ for i in range(len(data['lat'])):
     lat = str(data['lat'][i])
     lng = str(data['lng'][i])
 
-    if '.' in lat:
-        nlat = lat.split('.')
-        new_lats.append(nlat[0] + '.'.join(nlat[1:len(nlat)]))
-    else:
-        new_lats.append(lat)
+    lat_p_idx = lat.find('.')
+    nlat = lat.replace('.', '')
+    a_lat = nlat[:lat_p_idx] + '.' + nlat[lat_p_idx:]
+    new_lats.append(a_lat)
 
-    if '.' in lng:
-        nlng = lng.split('.')
-        new_lngs.append(nlng[0] + '.'.join(nlng[1:len(nlng)]))
-    else:
-        new_lngs.append(lng)
+    lng_p_idx = lng.find('.')
+    nlng = lng.replace('.', '')
+    a_lng = nlng[:lng_p_idx] + '.' + nlng[lng_p_idx:]
+    new_lngs.append(a_lng)
+
+    print(a_lat)
+    print(a_lng)
+
+del data['lat']
+del data['lng']
 
 data['lat'] = pd.DataFrame(new_lats)
 data['lng'] = pd.DataFrame(new_lngs)
