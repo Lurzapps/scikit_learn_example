@@ -3,7 +3,7 @@ import pandas as pd
 
 # define the column names, dataset address and class column index
 class_column_index = 0
-dataset_name = 'London'
+dataset_name = ['Delhi', 'London', 'Bangalore', 'Melbourne'][3]
 
 
 # methods to get columns and dataset address

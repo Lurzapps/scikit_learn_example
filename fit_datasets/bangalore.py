@@ -8,7 +8,7 @@ file_descriptor = '../datasets/Bangalore.txt'
 
 def column_names() -> list:
     with open(file_descriptor, 'r') as f:
-        return f.read().split(';')
+        return f.read().splitlines()[0].split(';')
 
 
 # read
