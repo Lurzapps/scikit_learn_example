@@ -22,14 +22,16 @@ idx = 0
 
 error = []
 
+column_features_start, column_features_stop = gl_vars.column_features_start_stop()
+
 # create splits form the dataframe
 for train_df, test_df in kfold.split(df):
     # gather target and training data from data
-    training_data = train_df.iloc[:, gl_vars.column_features_start:gl_vars.column_features_stop].values
+    training_data = train_df.iloc[:, column_features_start:column_features_stop].values
     training_target = train_df.iloc[:, gl_vars.class_column_index].values
 
     # same for for testing split set
-    testing_data = train_df.iloc[:, gl_vars.column_features_start:gl_vars.column_features_stop].values
+    testing_data = train_df.iloc[:, column_features_start:column_features_stop].values
     testing_target = train_df.iloc[:, gl_vars.class_column_index].values
 
     # init the scaler

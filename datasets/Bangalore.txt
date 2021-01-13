@@ -1,1 +1,3 @@
 price;area;loc;bedrooms
+1
+4

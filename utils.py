@@ -7,8 +7,9 @@ import global_variables as gl_vars
 def plot(data):
     # get columns to plot
     columns = []
+    column_features_start, column_features_stop = gl_vars.column_features_start_stop()
     for i in range(len(data.columns)):
-        if i == gl_vars.class_column_index or gl_vars.column_features_start <= i < gl_vars.column_features_stop:
+        if i == gl_vars.class_column_index or column_features_start <= i < column_features_stop:
             columns.append(data.columns[i])
 
     print(data[columns])
