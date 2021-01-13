@@ -25,7 +25,11 @@ error = []
 column_features_start, column_features_stop = gl_vars.column_features_start_stop()
 
 # create splits form the dataframe
-for train_df, test_df in kfold.split(df):
+for train_df_idx, test_df_idx in kfold.split(df):
+    # create dataframes from split indices
+    train_df = df.iloc[train_df_idx]
+    test_df = df.iloc[test_df_idx]
+
     # gather target and training data from data
     training_data = train_df.iloc[:, column_features_start:column_features_stop].values
     training_target = train_df.iloc[:, gl_vars.class_column_index].values

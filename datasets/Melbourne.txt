@@ -1,3 +1,3 @@
-price;area;lat;lng;bedrooms
+price;lat;lng;bedrooms;area
 1
 5

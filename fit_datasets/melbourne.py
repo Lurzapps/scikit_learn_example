@@ -14,13 +14,21 @@ data = pd.read_csv(file_old, sep=';', quotechar='"', skipinitialspace=True,
 new_areas = []
 
 for i in range(len(data['landsize'])):
-    building_area = data['building_area'][i]
-    landsize = data['landsize'][i]
+    building_area = str(data['building_area'][i])
+    landsize = str(data['landsize'][i])
 
-    if str(building_area) != 'nan':
-        new_areas.append(building_area)
+    if building_area != 'nan':
+        app = building_area
     else:
-        new_areas.append(landsize)
+        app = landsize
+
+    if '.' in app:
+        app_p_idx = app.find('.')
+        napp = app.replace('.', '')
+        a_app = napp[:app_p_idx] + '.' + napp[app_p_idx:]
+        new_areas.append(a_app)
+    else:
+        new_areas.append(app)
 
 # add column and bring it in the right position with excel afterwards
 data['area'] = pd.DataFrame(new_areas)

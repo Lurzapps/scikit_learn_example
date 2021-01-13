@@ -20,8 +20,8 @@ def plot(data):
                              diag_kind='kde', hue=gl_vars.column_names()[gl_vars.class_column_index])
 
     # little design
-    pp_fig = pair_plot.fig
-    pp_fig.subplots_adjust(top=0.93, wspace=0.3)
+    fig = pair_plot.fig
+    fig.subplots_adjust(top=0.93, wspace=0.3)
 
     # show the graph in sci view
     plt.show()
