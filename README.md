@@ -1,5 +1,5 @@
 # scikit learn example
-###necessary libraries
+necessary libraries:<br>
 (install via `pip install`)
 - matplotlib
 - scikit-learn
