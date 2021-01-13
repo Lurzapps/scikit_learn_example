@@ -47,11 +47,6 @@ for i in range(len(data['lat'])):
     a_lng = nlng[:lng_p_idx] + '.' + nlng[lng_p_idx:]
     new_lngs.append(a_lng)
 
-    print(a_lat)
-    print(a_lng)
-
-del data['lat']
-del data['lng']
 
 data['lat'] = pd.DataFrame(new_lats)
 data['lng'] = pd.DataFrame(new_lngs)
