@@ -5,6 +5,8 @@ import pandas as pd
 import global_variables as gl_vars
 
 # read csv
-data = pd.read_csv(gl_vars.dataset_address(), quotechar='"', skipinitialspace=True, names=gl_vars.column_names())
+data = gl_vars.read_df()
+# print the head of the csv
+print(data.head())
 # plot
 utils.plot(data)

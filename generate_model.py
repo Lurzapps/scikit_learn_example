@@ -12,13 +12,15 @@ from sklearn.linear_model import LogisticRegression, LinearRegression
 from sklearn.model_selection import KFold
 
 # read the dataset
-df = pd.read_csv(gl_vars.dataset_address(), quotechar='"', skipinitialspace=True, names=gl_vars.column_names())
+df = gl_vars.read_df()
 
 # create a kfold instance for cross validation
 kfold = KFold(n_splits=5, shuffle=True)
 
 # index for loop
 idx = 0
+
+error = []
 
 # create splits form the dataframe
 for train_df, test_df in kfold.split(df):
@@ -44,10 +46,19 @@ for train_df, test_df in kfold.split(df):
     testingX = scaling.transform(testing_data)
     # the testing y is the testing_target
     # print the score of the testing data
-    print('score %i: %f' % (idx, model.score(testingX, testing_target)))
+    this_err = 1 - model.score(testingX, testing_target)
+    print('score %i: %f' % (idx, this_err))
 
     # save the model afterwards
     utils.save_model_and_scaling(model, scaling, idx)
 
     # grow idx
     idx += 1
+
+    # grow err
+    error.append(error)
+
+# print median error
+err_arr = np.array(error)
+print('median error: %f' % np.median(err_arr))
+print('mean error: %f' % err_arr.mean())
