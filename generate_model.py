@@ -62,9 +62,9 @@ for train_df_idx, test_df_idx in kfold.split(df):
     idx += 1
 
     # grow err
-    error.append(error)
+    error.append(this_err)
 
 # print median error
-err_arr = np.array(error)
-print('median error: %f' % np.median(err_arr))
-print('mean error: %f' % err_arr.mean())
+arr = np.array(error)
+print('\n mean error: %f' % np.mean(arr))
+print(' median error: %f' % np.median(arr))
