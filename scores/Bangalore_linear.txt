@@ -1,10 +1,10 @@
 Bangalore | linear
 
-score 0: 0.166068
-score 1: 0.188486
-score 2: 0.139721
-score 3: 0.160827
-score 4: 0.174078
+score 0: 0.154860
+score 1: 0.189525
+score 2: 0.178001
+score 3: 0.157559
+score 4: 0.151355
 
- mean score: 0.165836
- median score: 0.166068
+ mean score: 0.166260
+ median score: 0.157559
