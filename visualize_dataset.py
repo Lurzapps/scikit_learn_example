@@ -29,8 +29,7 @@ print(data[data.columns])
 # plot pairs
 pair_plot = sns.pairplot(data[data.columns], height=1.8, aspect=1.8,
                          plot_kws=dict(edgecolor="k", linewidth=0.5),
-                         diag_kind='kde')
-# hue=gl_vars.column_names()[gl_vars.class_column_index]
+                         diag_kind='kde', hue=gl_vars.column_names()[gl_vars.class_column_index])
 
 # little design
 fig = pair_plot.fig

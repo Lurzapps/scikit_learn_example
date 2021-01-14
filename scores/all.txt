@@ -2,132 +2,132 @@
 
 Delhi | linear
 
-score 0: 0.175518
-score 1: 0.164201
-score 2: 0.164527
-score 3: 0.159832
-score 4: 0.147839
+score 0: 0.206291
+score 1: 0.154223
+score 2: 0.154480
+score 3: 0.145154
+score 4: 0.153942
 
- mean score: 0.162383
- median score: 0.164201
+ mean score: 0.162818
+ median score: 0.154223
 
 Delhi | k-nearest-neighbour
 
-score 0: 0.347947
-score 1: 0.311124
-score 2: 0.381229
-score 3: 0.379920
-score 4: 0.387894
+score 0: 0.352118
+score 1: 0.387662
+score 2: 0.369099
+score 3: 0.383670
+score 4: 0.367374
 
- mean score: 0.361623
- median score: 0.379920
+ mean score: 0.371985
+ median score: 0.369099
 
 Delhi | random-forest
 
-score 0: 0.723948
-score 1: 0.715515
-score 2: 0.732458
-score 3: 0.774813
-score 4: 0.726154
+score 0: 0.761612
+score 1: 0.700189
+score 2: 0.714681
+score 3: 0.732263
+score 4: 0.779715
 
- mean score: 0.734577
- median score: 0.726154
+ mean score: 0.737692
+ median score: 0.732263
 
 London | linear
 
-score 0: 0.474483
-score 1: 0.477755
-score 2: 0.465839
-score 3: 0.463381
-score 4: 0.467675
+score 0: 0.474958
+score 1: 0.463777
+score 2: 0.466331
+score 3: 0.462373
+score 4: 0.481480
 
- mean score: 0.469827
- median score: 0.467675
+ mean score: 0.469784
+ median score: 0.466331
 
 London | k-nearest-neighbour
 
-score 0: 0.639241
-score 1: 0.593271
-score 2: 0.675921
-score 3: 0.644330
-score 4: 0.600546
+score 0: 0.637047
+score 1: 0.621732
+score 2: 0.647573
+score 3: 0.608779
+score 4: 0.627157
 
- mean score: 0.630662
- median score: 0.639241
+ mean score: 0.628458
+ median score: 0.627157
 
 London | random-forest
 
-score 0: 0.925951
-score 1: 0.917185
-score 2: 0.925748
-score 3: 0.922901
-score 4: 0.923575
+score 0: 0.917475
+score 1: 0.921485
+score 2: 0.930859
+score 3: 0.919788
+score 4: 0.920740
 
- mean score: 0.923072
- median score: 0.923575
+ mean score: 0.922069
+ median score: 0.920740
 
 Bangalore | linear
 
-score 0: 0.154860
-score 1: 0.189525
-score 2: 0.178001
-score 3: 0.157559
-score 4: 0.151355
+score 0: 0.151021
+score 1: 0.148639
+score 2: 0.167364
+score 3: 0.204808
+score 4: 0.160305
 
- mean score: 0.166260
- median score: 0.157559
+ mean score: 0.166427
+ median score: 0.160305
 
 Bangalore | k-nearest-neighbour
 
-score 0: 0.387731
-score 1: 0.461225
-score 2: 0.389104
-score 3: 0.423954
-score 4: 0.436374
+score 0: 0.417176
+score 1: 0.409897
+score 2: 0.417805
+score 3: 0.460594
+score 4: 0.383623
 
- mean score: 0.419678
- median score: 0.423954
+ mean score: 0.417819
+ median score: 0.417176
 
 Bangalore | random-forest
 
-score 0: 0.747196
-score 1: 0.768643
-score 2: 0.658340
-score 3: 0.641938
-score 4: 0.691311
+score 0: 0.681956
+score 1: 0.678695
+score 2: 0.717541
+score 3: 0.717716
+score 4: 0.683308
 
- mean score: 0.701486
- median score: 0.691311
+ mean score: 0.695843
+ median score: 0.683308
 
 Melbourne | linear
 
-score 0: 0.276650
-score 1: 0.280531
-score 2: 0.293816
-score 3: 0.281335
-score 4: 0.280728
+score 0: 0.277250
+score 1: 0.287000
+score 2: 0.281936
+score 3: 0.287937
+score 4: 0.278980
 
- mean score: 0.282612
- median score: 0.280728
+ mean score: 0.282621
+ median score: 0.281936
 
 Melbourne | k-nearest-neighbour
 
-score 0: 0.746608
-score 1: 0.751303
-score 2: 0.745374
-score 3: 0.765825
-score 4: 0.743916
+score 0: 0.743334
+score 1: 0.743578
+score 2: 0.757116
+score 3: 0.762801
+score 4: 0.754586
 
- mean score: 0.750606
- median score: 0.746608
+ mean score: 0.752283
+ median score: 0.754586
 
 Melbourne | random-forest
 
-score 0: 0.957305
-score 1: 0.957545
-score 2: 0.957956
-score 3: 0.957930
-score 4: 0.958103
+score 0: 0.959040
+score 1: 0.957027
+score 2: 0.957256
+score 3: 0.957029
+score 4: 0.959150
 
- mean score: 0.957768
- median score: 0.957930
+ mean score: 0.957900
+ median score: 0.957256

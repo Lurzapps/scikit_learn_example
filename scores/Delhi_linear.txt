@@ -1,10 +1,10 @@
 Delhi | linear
 
-score 0: 0.175518
-score 1: 0.164201
-score 2: 0.164527
-score 3: 0.159832
-score 4: 0.147839
+score 0: 0.206291
+score 1: 0.154223
+score 2: 0.154480
+score 3: 0.145154
+score 4: 0.153942
 
- mean score: 0.162383
- median score: 0.164201
+ mean score: 0.162818
+ median score: 0.154223
