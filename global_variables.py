@@ -1,9 +1,16 @@
 from pandas import DataFrame
 import pandas as pd
 
+# cities and regressors that will be used
+cities = ['Delhi', 'London', 'Bangalore', 'Melbourne']
+regressors = ['linear', 'k-nearest-neighbour', 'random-forest']
+
 # define the column names, dataset address and class column index
 class_column_index = 0
-dataset_name = ['Delhi', 'London', 'Bangalore', 'Melbourne'][3]
+dataset_name = cities[0]
+regressor_type = regressors[0]
+
+save_models = False
 
 
 # methods to get columns and dataset address

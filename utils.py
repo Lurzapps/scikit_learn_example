@@ -1,6 +1,11 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pickle
+
+from sklearn.base import ClassifierMixin, RegressorMixin
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import MinMaxScaler
+
 import global_variables as gl_vars
 
 

@@ -1,0 +1,131 @@
+Delhi | linear
+
+score 0: 0.144841
+score 1: 0.157012
+score 2: 0.184462
+score 3: 0.141573
+score 4: 0.178760
+
+ mean score: 0.161330
+ median score: 0.157012
+
+Delhi | k-nearest-neighbour
+
+score 0: 0.342825
+score 1: 0.376204
+score 2: 0.397418
+score 3: 0.332171
+score 4: 0.343203
+
+ mean score: 0.358364
+ median score: 0.343203
+
+Delhi | random-forest
+
+score 0: 0.731732
+score 1: 0.722364
+score 2: 0.748335
+score 3: 0.786619
+score 4: 0.704917
+
+ mean score: 0.738793
+ median score: 0.731732
+
+London | linear
+
+score 0: 0.503908
+score 1: 0.456206
+score 2: 0.463907
+score 3: 0.473831
+score 4: 0.454076
+
+ mean score: 0.470386
+ median score: 0.463907
+
+London | k-nearest-neighbour
+
+score 0: 0.651470
+score 1: 0.621802
+score 2: 0.608755
+score 3: 0.633250
+score 4: 0.638581
+
+ mean score: 0.630772
+ median score: 0.633250
+
+London | random-forest
+
+score 0: 0.925576
+score 1: 0.918463
+score 2: 0.920325
+score 3: 0.917933
+score 4: 0.932231
+
+ mean score: 0.922906
+ median score: 0.920325
+
+Bangalore | linear
+
+score 0: 0.166068
+score 1: 0.188486
+score 2: 0.139721
+score 3: 0.160827
+score 4: 0.174078
+
+ mean score: 0.165836
+ median score: 0.166068
+
+Bangalore | k-nearest-neighbour
+
+score 0: 0.399701
+score 1: 0.408656
+score 2: 0.450939
+score 3: 0.382480
+score 4: 0.469584
+
+ mean score: 0.422272
+ median score: 0.408656
+
+Bangalore | random-forest
+
+score 0: 0.682402
+score 1: 0.675264
+score 2: 0.699665
+score 3: 0.728679
+score 4: 0.700285
+
+ mean score: 0.697259
+ median score: 0.699665
+
+Melbourne | linear
+
+score 0: 0.284336
+score 1: 0.283545
+score 2: 0.277929
+score 3: 0.286947
+score 4: 0.280307
+
+ mean score: 0.282613
+ median score: 0.283545
+
+Melbourne | k-nearest-neighbour
+
+score 0: 0.746880
+score 1: 0.746635
+score 2: 0.767732
+score 3: 0.741333
+score 4: 0.745405
+
+ mean score: 0.749597
+ median score: 0.746635
+
+Melbourne | random-forest
+
+score 0: 0.957955
+score 1: 0.957820
+score 2: 0.959248
+score 3: 0.957906
+score 4: 0.958056
+
+ mean score: 0.958197
+ median score: 0.957955

@@ -1,0 +1,10 @@
+Delhi | k-nearest-neighbour
+
+score 0: 0.342825
+score 1: 0.376204
+score 2: 0.397418
+score 3: 0.332171
+score 4: 0.343203
+
+ mean score: 0.358364
+ median score: 0.343203

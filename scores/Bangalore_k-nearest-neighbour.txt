@@ -1,0 +1,10 @@
+Bangalore | k-nearest-neighbour
+
+score 0: 0.399701
+score 1: 0.408656
+score 2: 0.450939
+score 3: 0.382480
+score 4: 0.469584
+
+ mean score: 0.422272
+ median score: 0.408656

@@ -1,4 +1,5 @@
 import utils
+from sklearn.ensemble import RandomForestClassifier
 import global_variables as gl_vars
 
 idx = 0
@@ -11,4 +12,4 @@ model, scaling = utils.load_model_and_scaling(idx)
 def predict(data):
     global model
     global scaling
-    model.predict(scaling.transform(data))
+    return model.predict(scaling.transform(data))
