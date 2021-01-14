@@ -1,15 +1,20 @@
 import pandas as pd
+from sklearn import tree
 
 import utils
 import global_variables as gl_vars
 import numpy as np
+import matplotlib.pyplot as plt
 
 # defines which scaling method will be used
 # and which classifier
 # (this has to be down in the code as well!)
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression, LinearRegression
+from sklearn.neighbors import KNeighborsRegressor, KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import KFold
+from sklearn.tree import export_graphviz
 
 # read the dataset
 df = gl_vars.read_df()
@@ -20,7 +25,7 @@ kfold = KFold(n_splits=5, shuffle=True)
 # index for loop
 idx = 0
 
-error = []
+score = []
 
 column_features_start, column_features_stop = gl_vars.column_features_start_stop()
 
@@ -44,7 +49,7 @@ for train_df_idx, test_df_idx in kfold.split(df):
     trainingX, trainingY = scaling.fit_transform(training_data), training_target
 
     # the model model
-    model = LogisticRegression()
+    model = RandomForestClassifier()
     # fit linear model
     model.fit(trainingX, trainingY)
 
@@ -52,8 +57,9 @@ for train_df_idx, test_df_idx in kfold.split(df):
     testingX = scaling.transform(testing_data)
     # the testing y is the testing_target
     # print the score of the testing data
-    this_err = 1 - model.score(testingX, testing_target)
-    print('score %i: %f' % (idx, this_err))
+    # ! this is the score and not the error !
+    this_score = model.score(testingX, testing_target)
+    print('score %i: %f' % (idx, this_score))
 
     # save the model afterwards
     utils.save_model_and_scaling(model, scaling, idx)
@@ -62,9 +68,9 @@ for train_df_idx, test_df_idx in kfold.split(df):
     idx += 1
 
     # grow err
-    error.append(this_err)
+    score.append(this_score)
 
 # print median error
-arr = np.array(error)
-print('\n mean error: %f' % np.mean(arr))
-print(' median error: %f' % np.median(arr))
+arr = np.array(score)
+print('\n mean score: %f' % np.mean(arr))
+print(' median score: %f' % np.median(arr))
