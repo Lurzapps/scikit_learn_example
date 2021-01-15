@@ -22,3 +22,4 @@ for city in gl_vars.cities:
         gl_vars.regressor_type = regressor
 
         os.system('generate_model.py %s %s %s' % (city, regressor, '0'))
+
