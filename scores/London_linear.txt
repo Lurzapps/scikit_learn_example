@@ -1,10 +1,9 @@
 London | linear
 
-score 0: 0.445141
-score 1: 0.469117
-score 2: 0.465402
-score 3: 0.486960
-score 4: 0.481768
+score 0: 0.473124
+score 1: 0.478991
+score 2: 0.497463
+score 3: 0.457761
+score 4: 0.447194
 
- mean score: 0.469677
- median score: 0.469117
+ mean score: 0.470907

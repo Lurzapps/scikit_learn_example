@@ -94,10 +94,8 @@ with open('scores/%s_%s.txt' % (gl_vars.dataset_name, gl_vars.regressor_type), '
             # grow idx
             idx += 1
 
-            # grow err
+            # grow infos for calculating means
             score.append(this_score)
 
-        # print median error
-        arr = np.array(score)
-        log('\n mean score: %f' % np.mean(arr))
-        log(' median score: %f' % np.median(arr))
+        # print mean scores
+        log('\n mean score: %f' % np.mean(score))

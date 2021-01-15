@@ -1,10 +1,9 @@
 London | k-nearest-neighbour
 
-score 0: 0.708565
-score 1: 0.692945
-score 2: 0.702829
-score 3: 0.685082
-score 4: 0.709785
+score 0: 0.720777
+score 1: 0.692807
+score 2: 0.657870
+score 3: 0.692561
+score 4: 0.703672
 
- mean score: 0.699841
- median score: 0.702829
+ mean score: 0.693537
