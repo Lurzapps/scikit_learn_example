@@ -72,9 +72,9 @@ with open('scores/%s_%s.txt' % (gl_vars.dataset_name, gl_vars.regressor_type), '
             if gl_vars.regressor_type == 'linear':
                 model = LinearRegression()
             elif gl_vars.regressor_type == 'random-forest':
-                model = RandomForestRegressor()
+                model = RandomForestRegressor(n_estimators=100)
             elif gl_vars.regressor_type == 'k-nearest-neighbour':
-                model = KNeighborsRegressor()
+                model = KNeighborsRegressor(n_neighbors=3)
 
             # fit linear model
             model.fit(trainingX, trainingY)

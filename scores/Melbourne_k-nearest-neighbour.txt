@@ -1,10 +1,10 @@
 Melbourne | k-nearest-neighbour
 
-score 0: 0.764482
-score 1: 0.745916
-score 2: 0.743149
-score 3: 0.750440
-score 4: 0.745631
+score 0: 0.794094
+score 1: 0.793180
+score 2: 0.804080
+score 3: 0.819799
+score 4: 0.796956
 
- mean score: 0.749923
- median score: 0.745916
+ mean score: 0.801622
+ median score: 0.796956

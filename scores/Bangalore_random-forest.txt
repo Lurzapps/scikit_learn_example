@@ -1,10 +1,10 @@
 Bangalore | random-forest
 
-score 0: 0.698930
-score 1: 0.710147
-score 2: 0.714902
-score 3: 0.655925
-score 4: 0.707994
+score 0: 0.746333
+score 1: 0.658447
+score 2: 0.679791
+score 3: 0.695698
+score 4: 0.736960
 
- mean score: 0.697579
- median score: 0.707994
+ mean score: 0.703445
+ median score: 0.695698

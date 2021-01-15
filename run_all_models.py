@@ -3,6 +3,10 @@ import sys
 import global_variables as gl_vars
 import os
 
+# delete old files in score dir
+for f in os.listdir('scores'):
+    os.remove(os.path.join('scores', f))
+
 # set save models false
 gl_vars.save_models = False
 

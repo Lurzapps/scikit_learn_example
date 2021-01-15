@@ -1,10 +1,10 @@
 Delhi | random-forest
 
-score 0: 0.712695
-score 1: 0.712900
-score 2: 0.753000
-score 3: 0.756548
-score 4: 0.763548
+score 0: 0.750915
+score 1: 0.753445
+score 2: 0.751991
+score 3: 0.739803
+score 4: 0.685592
 
- mean score: 0.739738
- median score: 0.753000
+ mean score: 0.736349
+ median score: 0.750915
