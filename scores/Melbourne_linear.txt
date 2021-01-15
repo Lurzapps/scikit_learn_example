@@ -1,10 +1,10 @@
 Melbourne | linear
 
-score 0: 0.277250
-score 1: 0.287000
-score 2: 0.281936
-score 3: 0.287937
-score 4: 0.278980
+score 0: 0.276171
+score 1: 0.284199
+score 2: 0.279054
+score 3: 0.285425
+score 4: 0.288455
 
- mean score: 0.282621
- median score: 0.281936
+ mean score: 0.282661
+ median score: 0.284199

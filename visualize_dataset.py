@@ -1,8 +1,11 @@
 from sys import argv
 
+from sklearn.preprocessing import MinMaxScaler
+
 import global_variables as gl_vars
 import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
 
 # show plot?
 show = True
@@ -13,7 +16,7 @@ if len(argv) > 1:
     show = not (argv[2] == '0')
 
 # read csv
-data = gl_vars.read_df()
+df = gl_vars.read_df()
 
 # plot
 # get columns to plot
@@ -24,12 +27,17 @@ data = gl_vars.read_df()
 #     if i == gl_vars.class_column_index or column_features_start <= i < column_features_stop:
 #         columns.append(data.columns[i])
 
-print(data[data.columns])
+# give overview over dataset
+print(df)
+
+# normalize the data with min max
+# https://stackoverflow.com/questions/26414913/normalize-columns-of-pandas-data-frame
+tdata = (df - df.min()) / (df.max() - df.min())
 
 # plot pairs
-pair_plot = sns.pairplot(data[data.columns], height=1.8, aspect=1.8,
+pair_plot = sns.pairplot(tdata, height=1.8, aspect=1.8,
                          plot_kws=dict(edgecolor="k", linewidth=0.5),
-                         diag_kind='kde', hue=gl_vars.column_names()[gl_vars.class_column_index])
+                         diag_kind='kde')
 
 # little design
 fig = pair_plot.fig
@@ -40,5 +48,3 @@ if show:
     plt.show()
 else:
     pair_plot.savefig('scores/%s.png' % gl_vars.dataset_name)
-
-

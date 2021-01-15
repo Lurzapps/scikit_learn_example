@@ -1,4 +1,3 @@
-import os
 from sys import argv
 
 import global_variables as gl_vars
@@ -10,7 +9,7 @@ import utils
 # (this has to be down in the code as well!)
 from sklearn.preprocessing import MinMaxScaler
 
-from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.ensemble import RandomForestRegressor
 
