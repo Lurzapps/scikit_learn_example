@@ -5,6 +5,7 @@ necessary libraries:<br>
 - matplotlib
 - scikit-learn
 - pandas
+
 <br><br>
 `global_variables.py`<br>
 Here all global variables like the column names etc. are set.
