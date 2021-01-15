@@ -1,4 +1,5 @@
-# scikit learn example
+# scikit learn housing prices project
+Compares the algorithms Linear Regression, K-Nearest-Neighbours & Random Forest on four city housing prices datasets (Delhi, Bangalore, London, Melbourne)<br><br>
 necessary libraries:<br>
 (install via `pip install`)
 - matplotlib
