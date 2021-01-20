@@ -59,8 +59,8 @@ with open('scores/%s_%s.txt' % (gl_vars.dataset_name, gl_vars.regressor_type), '
             training_target = train_df.iloc[:, gl_vars.class_column_index].values
 
             # same for for testing split set
-            testing_data = train_df.iloc[:, column_features_start:column_features_stop].values
-            testing_target = train_df.iloc[:, gl_vars.class_column_index].values
+            testing_data = test_df.iloc[:, column_features_start:column_features_stop].values
+            testing_target = test_df.iloc[:, gl_vars.class_column_index].values
 
             # init the scaler
             scaling = MinMaxScaler()
