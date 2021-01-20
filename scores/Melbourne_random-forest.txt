@@ -1,9 +1,9 @@
 Melbourne | random-forest
 
-score 0: 0.957548
-score 1: 0.960565
-score 2: 0.955997
-score 3: 0.957277
-score 4: 0.956337
+score 0: 0.665630
+score 1: 0.654290
+score 2: 0.719953
+score 3: 0.747925
+score 4: 0.714037
 
- mean score: 0.957545
+ mean score: 0.700367

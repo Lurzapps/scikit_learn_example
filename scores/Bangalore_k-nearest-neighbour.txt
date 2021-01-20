@@ -1,9 +1,9 @@
 Bangalore | k-nearest-neighbour
 
-score 0: 0.518562
-score 1: 0.443434
-score 2: 0.479494
-score 3: 0.526293
-score 4: 0.443863
+score 0: 0.113948
+score 1: 0.268095
+score 2: -0.059348
+score 3: 0.127269
+score 4: 0.076717
 
- mean score: 0.482329
+ mean score: 0.105336

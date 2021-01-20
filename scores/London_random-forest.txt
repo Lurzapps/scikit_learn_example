@@ -1,9 +1,9 @@
 London | random-forest
 
-score 0: 0.924426
-score 1: 0.922120
-score 2: 0.920588
-score 3: 0.920354
-score 4: 0.919803
+score 0: 0.435785
+score 1: 0.475301
+score 2: 0.324612
+score 3: 0.384289
+score 4: 0.517559
 
- mean score: 0.921458
+ mean score: 0.427509

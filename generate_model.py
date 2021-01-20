@@ -41,6 +41,7 @@ with open('scores/%s_%s.txt' % (gl_vars.dataset_name, gl_vars.regressor_type), '
         logfile.write(header)
         all_logfile.write('\n\n' + header)
 
+
         # function for logging to file and console
         def log(a: str):
             print(a)
@@ -74,7 +75,7 @@ with open('scores/%s_%s.txt' % (gl_vars.dataset_name, gl_vars.regressor_type), '
             elif gl_vars.regressor_type == 'random-forest':
                 model = RandomForestRegressor(n_estimators=100)
             elif gl_vars.regressor_type == 'k-nearest-neighbour':
-                model = KNeighborsRegressor(n_neighbors=3)
+                model = KNeighborsRegressor(n_neighbors=5)
 
             # fit linear model
             model.fit(trainingX, trainingY)
